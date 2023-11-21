@@ -11,7 +11,7 @@ function App() {
 
       <div style={{marginTop: '6%'}}>
         <Segment vertical color='grey' size='tiny' textAlign='center'>
-          &copy; 2023 - Projeto Oxe-lixo - IFPE Jaboatão dos Guararapes, alunos: Maria dos prazeres, Wilson roberto, Wesley vinicius e Aluska
+          &copy; 2023 - Projeto Oxe-lixo- contato:(81)0000-0000
         </Segment>
       </div>
 

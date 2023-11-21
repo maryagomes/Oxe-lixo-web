@@ -5,12 +5,12 @@ import { Container, Image, Menu } from 'semantic-ui-react';
 
 export default function Home() {
     return (
-        <div>
+        <div style={{}}>
             {/* Menu Superior */}
             <Menu fixed="top" inverted>
-                <Menu.Item as='a'>HOME</Menu.Item>
-                <Menu.Item as='a'>INSCREVER</Menu.Item>
-                <Menu.Item as='a'>PONTOS</Menu.Item>            
+            <Menu.Item as='a'>HOME</Menu.Item>            
+            <Menu.Item as='a'>CADASTRE-SE</Menu.Item>            
+            <Menu.Item as='a'>PONTOS DE COLETA</Menu.Item>            
             </Menu>
 
             {/* Conteúdo com 4 divs na horizontal ocupando a largura total do body */}
