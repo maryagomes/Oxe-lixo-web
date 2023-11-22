@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Header, Image, Form, Button } from 'semantic-ui-react';
 
-const Usuario = () => {
+const TelaUsuario = () => {
   return (
     <Container fluid>
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
@@ -66,4 +66,4 @@ const Usuario = () => {
   );
 };
 
-export default Usuario;
+export default TelaUsuario;
