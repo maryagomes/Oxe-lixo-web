@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image, Menu } from 'semantic-ui-react';
 
-export default function Home() {
+export default function TelaHome() {
     return (
         <div>          
             <Menu fixed="top" inverted>

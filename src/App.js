@@ -1,16 +1,17 @@
 import { Segment } from 'semantic-ui-react';
 import './App.css';
-import Home from './views/home/Home';
-import Login from './views/login/TelaLogin';
-import Usuario from './views/usuario/TelaUsuario';
 import { Segment } from 'semantic-ui-react';
+import TelaUsuario from './views/usuario/TelaUsuario';
+import TelaLogin from './views/login/TelaLogin';
+import TelaHome from './views/home/TelaHome';
+
 function App() {
 
   return (
 
     <div className="App">
       
-      <Home/>
+      <TelaHome/>
 
       <div style={{marginTop: '6%'}}>
         <Segment vertical color='grey' size='tiny' textAlign='center'>
