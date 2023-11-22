@@ -8,7 +8,7 @@ function App() {
 
     <div className="App">
       
-      <Login />
+      <Home />
 
       <div style={{marginTop: '6%'}}>
         <Segment vertical color='grey' size='tiny' textAlign='center'>
