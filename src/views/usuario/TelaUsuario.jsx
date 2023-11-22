@@ -92,7 +92,7 @@ const TelaUsuario = () => {
                   />
 
                   <Button color="teal" fluid size="large"                   
-                    Cadastrar
+                   
                     onClick={() => cadastrar()}
                     >
 				<Icon name='cadastrar' />
