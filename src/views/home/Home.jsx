@@ -21,22 +21,22 @@ export default function Home() {
 
 {/* Div 2 */}
 <div style={{ width: '100%', border: '1px solid #ccc', marginBottom: '20px', textAlign: 'center',  position: 'relative', padding: 0 }}>   
-    <Image src='parteverdeclarohome.jpg' fluid style={{ width: '100%', height: 'auto' }} />   
-    <div style={{ position: 'absolute', top: '80%', left: '90%', transform: 'translate(-50%, -60%)', display: 'flex', justifyContent: 'space-around', width: '80%' }}>
+    
+    <Image src='parteverdeclarohome.jpg' fluid style={{ width: '100%', height: 'auto' }} />
+    <div style={{position: 'absolute', top: '80%', left: '50%', transform: 'translate(-50%, -60%)', display: 'flex', justifyContent: 'space-around', width: '80%', alignItems:'center' }}>
         <div>
-            <Image src='mascotedecoleta.jpg' size='tiny' centered />
-           
+            <Image src='mascotedecoleta.jpg' size='small' centered />
         </div>
         <div>
-            <Image src='mascotedepontos.jpg' size='tiny' centered />
+            <Image src='mascotedepontos.jpg' size='small' centered />
             
         </div>
         <div>
-            <Image src='mascotedecoleta2.jpg' size='tiny' centered />
+            <Image src='mascotedecoleta2.jpg' size='small' centered />
             
         </div>
         <div>
-            <Image src='pilhas.jpg' size='tiny' centered />
+            <Image src='pilhas.jpg' size='small' centered />
             
         </div>
     </div>
@@ -63,22 +63,20 @@ export default function Home() {
 <div style={{ width: '100%', border: '1px solid #ccc', padding: '80px', marginBottom: '20px', background: '#ffd9b3', textAlign: 'center' }}>    
     <h2>EMPRESAS PARCEIRAS:</h2> 
     <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '20px' }}>
-        <div>
-            <Image src='ambipar.jpg' size='tiny' centered />          
+        <div style={{}}>
+            <Image src='ambipar.jpg' size='medium' centered circular />          
         </div>
         <div>
-            <Image src='celpe.jpg' size='tiny' centered />           
+            <Image src='celpe.jpg' size='small' centered circular bordered/>           
         </div>
         <div>
-            <Image src='duraceel.jpg' size='tiny' centered />          
+            <Image src='duraceel.jpg' size='small' centered circular />          
         </div>
         <div>
-            <Image src='atacadao.jpg' size='tiny' centered />          
+            <Image src='atacadao.jpg' size="small" centered circular />          
         </div>
     </div>
 </div>
-
-
             </Container>
        </div>
     )

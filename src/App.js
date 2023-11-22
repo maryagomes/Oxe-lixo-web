@@ -1,3 +1,4 @@
+import { Segment } from 'semantic-ui-react';
 import './App.css';
 import Home from './views/home/Home';
 import Login from './views/login/TelaLogin';
