@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Header, Image, Form, Button ,Segment} from 'semantic-ui-react';
 
-const Login = () => {
+const TelaLogin = () => {
   return (
     <Container fluid>
       <Grid
@@ -10,8 +10,8 @@ const Login = () => {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="teal" textAlign="center">
-            <Image src="/path/to/your/image.jpg" /> Login
+          <Header as="h2" color="write" textAlign="center">
+            <Image src="./planta.jpg" size='huge'  /> Login
           </Header>
           <Form size="large">
             <Segment stacked>
@@ -19,14 +19,14 @@ const Login = () => {
                 fluid
                 icon="user"
                 iconPosition="left"
-                placeholder="E-mail address"
+                placeholder="Digite seu email"
                 type="email"
               />
               <Form.Input
                 fluid
                 icon="lock"
                 iconPosition="left"
-                placeholder="Password"
+                placeholder="Digite sua senha"
                 type="password"
               />
 
@@ -41,4 +41,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default TelaLogin;

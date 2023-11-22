@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './views/home/Home';
-import Login from './views/login/login';
+import Login from './views/login/TelaLogin';
+import Usuario from './views/usuario/Usuario';
 import { Segment } from 'semantic-ui-react';
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
 
     <div className="App">
       
-      <Login />
+      <Usuario/>
 
       <div style={{marginTop: '6%'}}>
         <Segment vertical color='grey' size='tiny' textAlign='center'>
