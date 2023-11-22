@@ -3,16 +3,16 @@ import { Container, Image, Menu } from 'semantic-ui-react';
 
 export default function Home() {
     return (
-        <div style={{}}>
-            {/* Menu Superior */}
+        <div>          
             <Menu fixed="top" inverted>
-            <Menu.Item as='a'>HOME</Menu.Item>            
-            <Menu.Item as='a'>CADASTRE-SE</Menu.Item>            
-            <Menu.Item as='a'>PONTOS DE COLETA</Menu.Item>            
+                <Menu.Item as='a'>HOME</Menu.Item>
+                <Menu.Item as='a'>INSCREVER</Menu.Item>
+                <Menu.Item as='a'>PONTOS</Menu.Item>            
             </Menu>
-
-            {/* Conteúdo com 4 divs na horizontal ocupando a largura total do body */}
+           
             <Container fluid style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0 }}>
+
+                
                 {/* Div 1 */}
                 <div style={{ width: '100%',  marginBottom: '0px', background: '#e6f7ff' }}>
                     <Image src='imagemtelahome.jpg' fluid />               
@@ -78,7 +78,7 @@ export default function Home() {
     </div>
 </div>
             </Container>
-        </div>
+       </div>
     )
 }
 
