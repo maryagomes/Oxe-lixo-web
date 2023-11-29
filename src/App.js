@@ -1,9 +1,7 @@
 import { Segment } from 'semantic-ui-react';
 import './App.css';
-import TelaUsuario from './views/usuario/TelaUsuario';
-//import TelaLogin from './views/login/TelaLogin';
-//import TelaHome from './views/home/TelaHome';
-//import TelaEmpresa from './views/empresa/TelaEmpresa';
+import Rotas from './Rotas';
+
 
 
 function App() {
@@ -12,7 +10,8 @@ function App() {
 
     <div className="App">
       
-      <TelaUsuario/>
+      <Rotas />
+
 
       <div style={{marginTop: '6%'}}>
         <Segment vertical color='grey' size='tiny' textAlign='center'>
