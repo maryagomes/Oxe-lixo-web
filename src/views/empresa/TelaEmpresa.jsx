@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Grid, Header, Image, Form, Button } from 'semantic-ui-react';
+import MenuCental from "../../MenuCental";
 
 const TelaEmpresa = () => {
   return (
     <Container fluid>
+       <MenuCental />
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 600 }}>
           <Header as="h2" color="write" textAlign="center">

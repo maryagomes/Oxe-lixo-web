@@ -10,9 +10,10 @@ const GoogleMapSearch = () => {
     setSearchTerm(term);
 
     try {
-      const response = await fetch(`URL_DA_API_DO_GOOGLE_MAPS?query=${term}`);
+      const apiKey = 'AIzaSyBejre6ssB4bvltD4oK9TJYsBlfuchzliA';
+      const response = await fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${term}&key=${apiKey}`);
       const data = await response.json();
-      setSearchResults(data.results);  // Atualizar com a estrutura real da resposta da API
+      setSearchResults(data.results); 
     } catch (error) {
       console.error('Erro na busca:', error);
     }
@@ -51,7 +52,7 @@ const GoogleMapSearch = () => {
         <Segment style={{ background: 'transparent', border: 'none',  alignItems: 'center',  display: 'flex'}}>
             <Image
               src=".\mascotedecoleta2.jpg"  
-               size="small"  // Defina o tamanho como "small" para tornar a imagem menor
+               size="small"  
                spaced
                style={{ background: 'transparent', boxShadow: 'none' }} 
             />

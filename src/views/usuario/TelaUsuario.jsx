@@ -1,8 +1,12 @@
 import React , { useState } from 'react';
 import { Container, Grid, Header, Image, Form, Button, Icon } from 'semantic-ui-react';
 import axios from "axios";
+import MenuCental from "../../MenuCental";
+
 
 const TelaUsuario = () => {
+ 
+
   const [nome, setNome] = useState();
   const [email, seteEmail] = useState();
   const [senha, setSenha] = useState();
@@ -33,7 +37,9 @@ const TelaUsuario = () => {
   return (
 
     
+
     <Container fluid>
+      <MenuCental />
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 600 }}>
           <Header as="h2" color="write" textAlign="center">
