@@ -12,7 +12,7 @@ const TelaUsuario = () => {
   const [senha, setSenha] = useState();
   const [dataNascimento, setDataNascimento] = useState();
   
-  ;
+  
 
   function cadastrar() {
 
