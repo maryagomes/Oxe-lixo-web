@@ -56,13 +56,13 @@ export default function TelaHome() {
     <h2>EMPRESAS PARCEIRAS:</h2> 
     <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '20px' }}>
         <div style={{}}>
-            <Image src='ambipar.png' size='medium' centered circular />          
+            <Image src='ambipar.png' size='small' centered circular />          
         </div>
         <div>
             <Image src='celpe.png' size='small' centered circular bordered/>           
         </div>
         <div>
-            <Image src='duraceel.png' size='small' centered circular />          
+            <Image src='duracell.png' size='small' centered circular />          
         </div>
         <div>
             <Image src='atacadao.png' size="small" centered circular />          
