@@ -1,10 +1,30 @@
-import React,{ useState }from 'react';
-import { Container, Grid, Header, Image, Form, Button } from 'semantic-ui-react';
+import React, { useEffect, useState }from 'react';
+import { Container, Grid, Header, Image, Form, Button} from 'semantic-ui-react';
+import { /*Link*/useLocation } from "react-router-dom";
 import axios from "axios";
+import InputMask from 'react-input-mask';
 import MenuCental from "../../MenuCental";
 
 const TelaEmpresa = () => {
   
+  const { state } = useLocation();
+  const [idEmpresa, setIdEmpresa] = useState();
+
+  useEffect(() => {
+      if (state != null && state.id != null) {
+          axios.get("http://localhost:8080/api/empresa/" + state.id)
+.then((response) => {
+                         setIdEmpresa(response.data.id)
+                         setNomeEmpresa(response.data.nomeEmpresa)
+                         setSenha(response.data.senha)
+                         setDataFundacao(formatarData(response.data.dataFundacao))
+                         setEmail(response.data.email)
+                         setSite(response.data.site)
+                         setCnpj(response.data.cnpj)
+          })
+      }
+}, [state])
+
   const [nomeEmpresa, setNomeEmpresa] = useState();
   const [senha, setSenha] = useState();
   const [cnpj, setCnpj] = useState();
@@ -23,8 +43,19 @@ const TelaEmpresa = () => {
          cnpj:cnpj,
 		     
 		}
+
+    /*function formatarData(dataParam) {
+
+      if (dataParam === null || dataParam === '' || dataParam === undefined) {
+          return ''
+      }
+  
+      let arrayData = dataParam.split('-');
+      return arrayData[2] + '/' + arrayData[1] + '/' + arrayData[0];
+  }*/
+  
 	
-		axios.post("http://localhost:8082/api/empresa", empresaRequest)
+		axios.post("http://localhost:8080/api/empresa", empresaRequest)
 		.then((response) => {
 		     console.log(' cadastrado com sucesso.')
 		})
@@ -114,12 +145,16 @@ const TelaEmpresa = () => {
                     fluid
                     icon="calendar"
                     iconPosition="left"
-                    label="Data de Fundação"
-                    placeholder="Digite a Data de Fundação"
-                    type="date"
+                    label="Data de Fundação">
+                    
+                    <InputMask 
+                    mask="99/99/9999" 
+                    maskChar={null}
+                    placeholder="Ex: 20/03/1985"
                     value={dataFundacao}
-				onChange={e => setDataFundacao(e.target.value)} 
-                  />
+            onChange={e => setDataFundacao(e.target.value)}
+                /> 
+                  </Form.Input>
 
                   <Button color="teal" fluid size="large" onClick={() => cadastrar()}>
                     Cadastrar

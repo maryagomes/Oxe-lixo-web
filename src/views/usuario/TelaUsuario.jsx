@@ -1,19 +1,48 @@
-import React , { useState } from 'react';
+import React , { useEffect,useState } from 'react';
 import { Container, Grid, Header, Image, Form, Button, Icon } from 'semantic-ui-react';
+import { /*Link*/useLocation } from "react-router-dom";
+import InputMask from 'react-input-mask';
 import axios from "axios";
 import MenuCental from "../../MenuCental";
 
 
 const TelaUsuario = () => {
  
+  const { state } = useLocation();
+  const [idUsuario, setIdUsuario] = useState();
+
+  useEffect(() => {
+      if (state != null && state.id != null) {
+          axios.get("http://localhost:8080/api/usuario/" + state.id)
+.then((response) => {
+                         setIdUsuario(response.data.id)
+                         setNome(response.data.nome)
+                         setSenha(response.data.senha)
+                         setDataNascimento(formatarData(response.data.dataNascimento))
+                         setEmail(response.data.email)
+                         
+
+                       
+          })
+      }
+}, [state])
 
   const [nome, setNome] = useState();
-  const [email, seteEmail] = useState();
+  const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
   const [dataNascimento, setDataNascimento] = useState();
-  
-  
 
+
+  function formatarData(dataParam) {
+
+    if (dataParam === null || dataParam === '' || dataParam === undefined) {
+        return ''
+    }
+
+    let arrayData = dataParam.split('-');
+    return arrayData[2] + '/' + arrayData[1] + '/' + arrayData[0];
+}
+  
   function cadastrar() {
 
 		let usuarioRequest = {
@@ -24,7 +53,7 @@ const TelaUsuario = () => {
 		     
 		}
 	
-		axios.post("http://localhost:8082/api/usuario", usuarioRequest)
+		axios.post("http://localhost:8080/api/usuario", usuarioRequest)
 		.then((response) => {
 		     console.log(' cadastrado com sucesso.')
 		})
@@ -70,7 +99,7 @@ const TelaUsuario = () => {
                     placeholder="Digite Seu E-mail"
                     type="email"
                     value={email}
-			onChange={e => seteEmail(e.target.value)}
+			onChange={e => setEmail(e.target.value)}
 
                   />
                   <Form.Input
@@ -90,13 +119,18 @@ const TelaUsuario = () => {
                     fluid
                     icon="calendar"
                     iconPosition="left"
-                    label="Data de Nascimento"
-                    placeholder="Digite Sua Data de Nascimento"
-                    type="date"
+                    label="Data de Nascimento" 
+                    >
+                    
+                    <InputMask 
+                    mask="99/99/9999" 
+                    maskChar={null}
+                    placeholder="Ex: 20/03/1985"
                     value={dataNascimento}
-			onChange={e => setDataNascimento(e.target.value)}
-
-                  />
+            onChange={e => setDataNascimento(e.target.value)}
+                /> 
+                  </Form.Input>
+                  
 
                   <Button color="teal" fluid size="large"                   
                    
