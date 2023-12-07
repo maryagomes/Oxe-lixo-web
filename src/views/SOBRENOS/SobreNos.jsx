@@ -4,29 +4,21 @@ import MenuCental from "../../MenuCental";
 
 const SobreNos = () => {
   const equipe = [
-    {
-      nome: "Membro 1",
-      cargo: "Cargo 1",
-      foto: "url_da_foto_1.jpg",
-      descricao: "Breve descrição sobre o Membro 1.",
+    { nome: "Membro 1",    
+      foto: "maria.jpg",
+      descricao: "Maria Dos Prazeres, nossa desenvolvedora de backend.",
     },
-    {
-      nome: "Membro 2",
-      cargo: "Cargo 2",
+    { nome: "Membro 2",   
       foto: "url_da_foto_2.jpg",
-      descricao: "Breve descrição sobre o Membro 2.",
+      descricao: "Wilson Roberto,nosso desenvolvedor de backend.",
     },
-    {
-      nome: "Membro 3",
-      cargo: "Cargo 3",
-      foto: "url_da_foto_3.jpg",
-      descricao: "Breve descrição sobre o Membro 3.",
+    { nome: "Membro 3",    
+      foto: "wesley.jpg",
+      descricao: "Wesley Vinicius,nosso desenvolvedor de frontend.",
     },
-    {
-      nome: "Membro 4",
-      cargo: "Cargo 4",
-      foto: "url_da_foto_4.jpg",
-      descricao: "Breve descrição sobre o Membro 4.",
+    { nome: "Membro 4",
+      foto: "aluska.jpg",
+      descricao: "Aluska Soares,nossa desenvolvedora de frontend.",
     },
   ];
 
@@ -48,28 +40,27 @@ const SobreNos = () => {
       </Segment>
 
       <Segment>
-        <Header as="h2">Informações de Contato:</Header>
-        <List>
-          <List.Item>Endereço: Rua da Empresa, Número, Cidade</List.Item>
-          <List.Item>E-mail: contato@empresa.com</List.Item>
-          <List.Item>Telefone: (XX) XXXX-XXXX</List.Item>
-        </List>
-      </Segment>
-
-      <Segment>
         <Header as="h2">Equipe</Header>
         <Card.Group itemsPerRow={4}>
           {equipe.map((membro, index) => (
             <Card key={index}>
               <Image src={membro.foto} wrapped ui={false} />
               <Card.Content>
-                <Card.Header>{membro.nome}</Card.Header>
-                <Card.Meta>{membro.cargo}</Card.Meta>
+                <Card.Header>{membro.nome}</Card.Header>              
                 <Card.Description>{membro.descricao}</Card.Description>
               </Card.Content>
             </Card>
           ))}
         </Card.Group>
+      </Segment>
+
+      <Segment>
+        <Header as="h2">Informações de Contato:</Header>
+        <List>
+          <List.Item>Endereço: Rua da Empresa, Número, Cidade</List.Item>
+          <List.Item>E-mail: contato@empresa.com</List.Item>
+          <List.Item>Telefone: (XX) XXXX-XXXX</List.Item>
+        </List>
       </Segment>
     </Container>
   );
