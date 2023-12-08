@@ -2,6 +2,7 @@ import React, { useEffect, useState }from 'react';
 import { Container, Grid, Header, Image, Form, Button} from 'semantic-ui-react';
 import { /*Link*/useLocation } from "react-router-dom";
 import axios from "axios";
+import {mensagemErro, notifyError, notifySuccess } from '../util/Util';
 import InputMask from 'react-input-mask';
 import MenuCental from "../../MenuCental";
 
@@ -32,6 +33,18 @@ const TelaEmpresa = () => {
   const [email, setEmail] = useState();
   const [site, setSite] = useState();
 
+
+  function formatarData(dataParam) {
+
+    if (dataParam === null || dataParam === '' || dataParam === undefined) {
+        return ''
+    }
+
+    //let arrayData = dataParam.split('-');
+    return dataParam[2] + '/' + dataParam[1] + '/' + dataParam[0];
+}
+
+
   function cadastrar() {
 
 		let empresaRequest = {
@@ -44,24 +57,17 @@ const TelaEmpresa = () => {
 		     
 		}
 
-    /*function formatarData(dataParam) {
-
-      if (dataParam === null || dataParam === '' || dataParam === undefined) {
-          return ''
-      }
-  
-      let arrayData = dataParam.split('-');
-      return arrayData[2] + '/' + arrayData[1] + '/' + arrayData[0];
-  }*/
-  
-	
 		axios.post("http://localhost:8080/api/empresa", empresaRequest)
 		.then((response) => {
-		     console.log(' cadastrado com sucesso.')
+      notifySuccess(' cadastrado com sucesso.')
 		})
 		.catch((error) => {
-		     console.log('Erro ao cadastrar.')
-		})
+      if (error.response) {
+      notifyError(error.response.data.errors[0].defaultMessage)
+      } else {
+      notifyError(mensagemErro)
+      } 
+      })
 	}
 
  

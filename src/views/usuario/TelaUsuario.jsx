@@ -3,6 +3,7 @@ import { Container, Grid, Header, Image, Form, Button, Icon } from 'semantic-ui-
 import { /*Link*/useLocation } from "react-router-dom";
 import InputMask from 'react-input-mask';
 import axios from "axios";
+import {mensagemErro, notifyError, notifySuccess } from '../util/Util';
 import MenuCental from "../../MenuCental";
 
 
@@ -55,12 +56,16 @@ const TelaUsuario = () => {
 	
 		axios.post("http://localhost:8080/api/usuario", usuarioRequest)
 		.then((response) => {
-		     console.log(' cadastrado com sucesso.')
+      notifySuccess(' cadastrado com sucesso.')
 		})
 		.catch((error) => {
-		     console.log('Erro ao cadastrar.')
-		})
-	}
+      if (error.response) {
+      notifyError(error.response.data.errors[0].defaultMessage)
+      } else {
+      notifyError(mensagemErro)
+      } 
+      })
+    }
 
  
   return (
@@ -152,6 +157,6 @@ const TelaUsuario = () => {
       </Grid>
     </Container>
   );
-};
 
+}
 export default TelaUsuario;
