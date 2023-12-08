@@ -14,6 +14,8 @@ export default function TelaHome() {
                 <Menu.Item as={Link} to="/tela-empresa">EMPRESA</Menu.Item>
                 <Menu.Item as={Link} to="/pontos-de-coleta">PONTOS DE COLETA</Menu.Item>
                 <Menu.Item as={Link} to="/sobre-nos">SOBRE NÓS</Menu.Item>
+                <Menu.Item as={Link} to="/home-usuario">Usuario</Menu.Item>
+
             </Menu>
 
            

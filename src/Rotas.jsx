@@ -7,6 +7,7 @@ import TelaUsuario from './views/usuario/TelaUsuario';
 import TelaLogin from './views/login/TelaLogin';
 import PontosDeColeta from './views/coleta/PontosDeColeta'
 import SobreNos from './views/SOBRENOS/SobreNos';
+import HomeUsuario from './views/homeusuario/HomeUsuario';
 
 function Rotas() {
     return (
@@ -18,6 +19,7 @@ function Rotas() {
                 <Route path="tela-login" element={ <TelaLogin/> } />
                 <Route path="pontos-de-coleta" element={ <PontosDeColeta/> } />
                 <Route path="sobre-nos" element={ <SobreNos/> } />
+                <Route path="home-usuario" element={ <HomeUsuario/> } />
 
 
             </Routes>

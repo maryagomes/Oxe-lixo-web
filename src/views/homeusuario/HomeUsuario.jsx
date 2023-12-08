@@ -8,7 +8,8 @@ export default function HomeUsuario() {
                
            <div>
             <Menu fixed="top" inverted style={{ background: '#ed9134', display: 'flex', justifyContent: 'center' }}>
-                <Menu.Item as={Link} to="/">Inicio</Menu.Item>
+                <Menu.Item as={Link} to="/">INICIO</Menu.Item>
+                <Menu.Item as={Link} to="/tela-home">HOME</Menu.Item>
                 <Menu.Item as={Link} to="/tela-empresa">EMPRESA</Menu.Item>
                 <Menu.Item as={Link} to="/pontos-de-coleta">PONTOS DE COLETA</Menu.Item>
                 <Menu.Item as={Link} to="/sobre-nos">SOBRE NÓS</Menu.Item>
@@ -28,13 +29,11 @@ export default function HomeUsuario() {
         <div style={{ minWidth: '100%', padding: '70px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
             <div>
-                <h2><b></b></h2>
-                <p></p>
+               
             </div>
-            <br></br>
+           
             <div>
-                <h2></h2>
-                <p>Nosso objetivo é conscientizar e mostrar opções seguras sobre o descarte de lixo eletrônico.</p>
+               
             </div>
         </div>
     </div>   
