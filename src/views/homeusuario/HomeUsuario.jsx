@@ -8,9 +8,7 @@ export default function HomeUsuario() {
                
            <div>
             <Menu fixed="top" inverted style={{ background: '#ed9134', display: 'flex', justifyContent: 'center' }}>
-                <Menu.Item as={Link} to="/">INICIO</Menu.Item>
-                <Menu.Item as={Link} to="/tela-home">HOME</Menu.Item>
-                <Menu.Item as={Link} to="/tela-empresa">EMPRESA</Menu.Item>
+                <Menu.Item as={Link} to="/">INICIO</Menu.Item>                            
                 <Menu.Item as={Link} to="/pontos-de-coleta">PONTOS DE COLETA</Menu.Item>
                 <Menu.Item as={Link} to="/sobre-nos">SOBRE NÓS</Menu.Item>
             </Menu>
