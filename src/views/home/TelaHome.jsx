@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { Container, Image, Menu } from 'semantic-ui-react';
+import { Container, Image, Menu, Card } from 'semantic-ui-react';
 
 
 export default function TelaHome() {
@@ -27,30 +27,47 @@ export default function TelaHome() {
                     <Image src='imagemtelahome.jpg' fluid />               
                 </div>  
 
-             {/* Div 2 */}
-<div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>   
-  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
-    
-    {/* Coluna 1 */}
-    <div style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-      <h2>O QUE É LIXO ELETRÔNICO?</h2>
-      <img src="lixo eletronico.jpg" alt="Imagem 1" style={{ width: '100px', height: '100px', marginBottom: '10px' }} />
-      <p>E-lixo, resíduos de equipamento eletroeletrônico (REEE) ou lixo eletrônico.</p>
-      <p>Todos esses termos se referem à mesma coisa: produtos elétricos e eletrônicos quebrados,</p>
-      <p>danificados ou sem utilidade por algum motivo e pilhas descarregadas que devem ser descartados.</p>
-    </div>
-    
-    {/* Coluna 2 */}
-    <div style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-      <h2>QUAIS AS CONSEQUENCIAS DO LIXO ELETRÔNICO</h2>
-      <img src="Duvida.jpg" alt="Imagem 2" style={{ width: '100px', height: '100px', marginBottom: '10px' }} />
-      <p>Poluição do solo e da água.</p>
-      <p>Riscos para a saúde humana.</p>
-     
-    </div>
-  </div>
-</div>
+            {/* Div 2 */}
+            <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    {/* Coluna 1 */}
+                    <div style={{ width: '30%', position: 'relative' }}>
+                        <Image src='tela1.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                            <Card.Content>
+                                <Card.Header>Titulo 1</Card.Header>
+                                <Card.Meta>
+                                    <Link to="/link1">Link 1</Link>
+                                </Card.Meta>
+                            </Card.Content>
+                        </Card>
+                    </div>
 
+                    {/* Coluna 2 */}
+                    <div style={{ width: '30%', position: 'relative' }}>
+                        <Image src='tela2.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                            <Card.Content>
+                                <Card.Header>Titulo 2</Card.Header>
+                                <Card.Meta>
+                                    <Link to="/link2">Link 2</Link>
+                                </Card.Meta>
+                            </Card.Content>
+                        </Card>
+                    </div>
+
+                    {/* Coluna 3 */}
+                    <div style={{ width: '30%', position: 'relative' }}>
+                        <Image src='tela3.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                            <Card.Content>
+                                <Card.Header>Titulo 3</Card.Header>
+                                <Card.Meta>
+                                    <Link to="/link2">Link 3</Link>
+                                </Card.Meta>
+                            </Card.Content>
+                        </Card>
+                    </div>
+</div>
 
 
 {/* Div 3 */}
