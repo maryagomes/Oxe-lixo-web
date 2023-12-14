@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Container, Image, Menu, Modal,Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { Button, Container, Image, Menu, Modal } from 'semantic-ui-react';
 
 
 import { FaUser } from 'react-icons/fa';
@@ -125,6 +125,7 @@ Com isso, nós podemos evitar a contaminação do ambiente e colaborar com nossa
                     {/* Adicione as opções de "Editar Perfil" e "Configurações" aqui */}
                     <Button as={Link} to="/editar-perfil" fluid>Editar Perfil</Button>
                     <Button as={Link} to="/configuracoes" fluid>Configurações</Button>
+                    <Button as={Link} to="/sair" fluid>Sair</Button>
                 </Modal.Content>
             </Modal>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header, Image, Form, Button ,Segment} from 'semantic-ui-react';
+import { Container, Grid, Image, Form, Button ,Segment} from 'semantic-ui-react';
 
 
 const TelaLogin = () => {
@@ -10,12 +10,10 @@ const TelaLogin = () => {
       <Grid
         textAlign="center"
         style={{ height: '100vh' }}
-        verticalAlign="middle"
-      >
+        verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="write" textAlign="center">
-            <Image src="./planta.jpg" size='huge'  /> Login
-          </Header>
+        <Image src="./logosemfundo.jpg" size='large'  />
+
           <Form size="large">
             <Segment stacked>
               <Form.Input
