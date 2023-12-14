@@ -9,7 +9,7 @@ const SobreNos = () => {
       descricao: "Maria Dos Prazeres, nossa desenvolvedora de backend.",
     },
     { nome: "Membro 2",   
-      foto: "url_da_foto_2.jpg",
+      foto: "wilson.jpg",
       descricao: "Wilson Roberto,nosso desenvolvedor de backend.",
     },
     { nome: "Membro 3",    
