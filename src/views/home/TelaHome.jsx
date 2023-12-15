@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { Container, Image, Menu, Card } from 'semantic-ui-react';
+import { Card, Container, Image, Menu } from 'semantic-ui-react';
 
 
 export default function TelaHome() {
     return (
                
            <div>
-            <Menu fixed="top" inverted style={{ background: '#ed9121', display: 'flex', justifyContent: 'center' }}>
+            <Menu fixed="top" inverted style={{ background: '#ed8321', display: 'flex', justifyContent: 'center' }}>
                 <Menu.Item as={Link} to="/">HOME</Menu.Item>
                 <Menu.Item as={Link} to="/tela-usuario">INSCREVER</Menu.Item>
                 <Menu.Item as={Link} to="/tela-login">LOGIN</Menu.Item>
@@ -28,13 +28,15 @@ export default function TelaHome() {
                 </div>  
 
             {/* Div 2 */}
-            <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+            <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '50px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', padding: 30, }}>
+                 {/* Div 3 */}
+            <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '0px', margintop:'50px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', padding: 30, background: '#F0F8FF' }}>
                     {/* Coluna 1 */}
                     <div style={{ width: '30%', position: 'relative' }}>
-                        <Image src='tela1.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                        <Image src='causas.png' style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4em'  }} />
+                        <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
-                                <Card.Header>Titulo 1</Card.Header>
+                                <Card.Header>Causas do lixo eletronico</Card.Header>
                                 <Card.Meta>
                                     <Link to="/link1">Link 1</Link>
                                 </Card.Meta>
@@ -44,10 +46,10 @@ export default function TelaHome() {
 
                     {/* Coluna 2 */}
                     <div style={{ width: '30%', position: 'relative' }}>
-                        <Image src='tela2.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                        <Image src='coleta.png' style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius:'5em' }} />
+                        <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
-                                <Card.Header>Titulo 2</Card.Header>
+                                <Card.Header>Como fazer o descarte</Card.Header>
                                 <Card.Meta>
                                     <Link to="/link2">Link 2</Link>
                                 </Card.Meta>
@@ -56,21 +58,43 @@ export default function TelaHome() {
                     </div>
 
                     {/* Coluna 3 */}
-                    <div style={{ width: '30%', position: 'relative' }}>
-                        <Image src='tela3.jpg' style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                        <Card style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+                    <div style={{ width: '30%', position: 'relative', background:'red' }}>
+                        <Image src='pontuacoes.png' style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4em' }} />
+                        <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
-                                <Card.Header>Titulo 3</Card.Header>
+                                <Card.Header>Pontuações</Card.Header>
                                 <Card.Meta>
                                     <Link to="/link2">Link 3</Link>
                                 </Card.Meta>
                             </Card.Content>
                         </Card>
+                        </div>
                     </div>
 </div>
 
 
-{/* Div 3 */}
+
+{/* Div 4 */}
+<div >
+    
+
+    {/* Div 5 */}
+    <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '0px', margintop:'50px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', padding: 30 }}> 
+    <div  style={{ borderRadius:'5em', width: '40em', height:'40em',  padding: '80px', marginBottom: '20px', background: '#ffffff70', textAlign: 'center' }}>    
+    <h2>Olá, sou o mascote OxE-lixo</h2> 
+    <p>Fui criado em 2023, 
+    </p>
+    </div>
+
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <div style={{}}>
+            <Image src='mascotedecoleta.jpg' size="medium" centered circular />          
+        </div>
+        </div>
+</div>
+</div>
+
+{/* Div 6 */}
 <div style={{ width: '100%',  padding: '80px', marginBottom: '20px', background: '#008080', textAlign: 'center' }}>    
     <h2>EMPRESAS PARCEIRAS:</h2> 
     <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '20px' }}>
