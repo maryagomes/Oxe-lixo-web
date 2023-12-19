@@ -4,6 +4,7 @@ import { Card, Container, Image, Menu } from 'semantic-ui-react';
 
 
 export default function TelaHome() {
+    
     return (
                
            <div>
@@ -14,8 +15,7 @@ export default function TelaHome() {
                 <Menu.Item as={Link} to="/tela-empresa">EMPRESA</Menu.Item>
                 <Menu.Item as={Link} to="/pontos-de-coleta">PONTOS DE COLETA</Menu.Item>
                 <Menu.Item as={Link} to="/sobre-nos">SOBRE NÓS</Menu.Item>
-                <Menu.Item as={Link} to="/home-usuario">Usuario</Menu.Item>
-
+                
             </Menu>
 
            
@@ -37,9 +37,6 @@ export default function TelaHome() {
                         <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
                                 <Card.Header>Causas do lixo eletronico</Card.Header>
-                                <Card.Meta>
-                                    <Link to="/link1">Link 1</Link>
-                                </Card.Meta>
                             </Card.Content>
                         </Card>
                     </div>
@@ -50,22 +47,16 @@ export default function TelaHome() {
                         <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
                                 <Card.Header>Como fazer o descarte</Card.Header>
-                                <Card.Meta>
-                                    <Link to="/link2">Link 2</Link>
-                                </Card.Meta>
                             </Card.Content>
                         </Card>
                     </div>
 
                     {/* Coluna 3 */}
-                    <div style={{ width: '30%', position: 'relative', background:'red' }}>
-                        <Image src='pontuacoes.png' style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4em' }} />
+                    <div style={{ width: '30%', position: 'relative', background:'' }}>
+                        <Image src='pontuacoes.png' style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '5em' }} />
                         <Card style={{ position: 'absolute', top: '85%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'Grey' }}>
                             <Card.Content>
                                 <Card.Header>Pontuações</Card.Header>
-                                <Card.Meta>
-                                    <Link to="/link2">Link 3</Link>
-                                </Card.Meta>
                             </Card.Content>
                         </Card>
                         </div>
@@ -80,9 +71,10 @@ export default function TelaHome() {
 
     {/* Div 5 */}
     <div style={{ width: '100%', overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '0px', margintop:'50px', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', padding: 30 }}> 
-    <div  style={{ borderRadius:'5em', width: '40em', height:'40em',  padding: '80px', marginBottom: '20px', background: '#ffffff70', textAlign: 'center' }}>    
+    <div  style={{ borderRadius:'5em', width: '40em', height:'30em',  padding: '80px', marginBottom: '20px', background: '#ffffff70', textAlign: 'center' }}>    
     <h2>Olá, sou o mascote OxE-lixo</h2> 
-    <p>Fui criado em 2023, 
+    <p>Fui criado em 2023, para ajudar você a encontrar o seu ponto de coleta.
+    <p>venha comigo nessa incrível viagem!</p>
     </p>
     </div>
 
@@ -113,6 +105,7 @@ export default function TelaHome() {
     </div>
 </div>
             </Container>
+
        </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { Button, Container, Image, Menu, Modal } from 'semantic-ui-react';
+import { Button, Container, Image, Menu, MenuItem, Modal } from 'semantic-ui-react';
 
 
 import { FaUser } from 'react-icons/fa';
@@ -14,10 +14,12 @@ export default function HomeUsuario() {
     return (
         <div>
             <Menu fixed="top" inverted style={{ background: '#ed9134', display: 'flex', justifyContent: 'space-between' }}>
-            
+                <MenuItem position="left">
                 <Menu.Item as={Link} to="/">INICIO</Menu.Item>
                 <Menu.Item as={Link} to="/pontos-de-coleta">PONTOS DE COLETA</Menu.Item>
                 <Menu.Item as={Link} to="/sobre-nos">SOBRE NÓS</Menu.Item>
+                </MenuItem>
+                
                 <Menu.Item position='right'>
                 <FaUser size='2em' onClick={openModal} style={{ cursor: 'pointer' }} />  
                 </Menu.Item>

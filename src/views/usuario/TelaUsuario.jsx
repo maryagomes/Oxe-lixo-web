@@ -19,6 +19,7 @@ const TelaUsuario = () => {
                          setIdUsuario(response.data.id)
                          setNome(response.data.nome)
                          setSenha(response.data.senha)
+                         setFoneCelular(response.data.foneCelular)
                          setDataNascimento(formatarData(response.data.dataNascimento))
                          setEmail(response.data.email)
                          
@@ -31,6 +32,7 @@ const TelaUsuario = () => {
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
+  const [foneCelular,setFoneCelular]=useState();
   const [dataNascimento, setDataNascimento] = useState();
 
 
@@ -133,6 +135,23 @@ const TelaUsuario = () => {
                     placeholder="Ex: 20/03/1985"
                     value={dataNascimento}
             onChange={e => setDataNascimento(e.target.value)}
+                /> 
+                  </Form.Input>
+                  
+                  <Form.Input
+                  required
+                    fluid
+                    icon="phone"
+                    iconPosition="left"
+                    label="Número" 
+                    >
+                    
+                    <InputMask 
+                    mask="(99) 99999-9999" 
+                    maskChar={null}
+                    placeholder="Ex: (81) 98875-5544"
+                    value={foneCelular}
+            onChange={e => setFoneCelular(e.target.value)}
                 /> 
                   </Form.Input>
                   

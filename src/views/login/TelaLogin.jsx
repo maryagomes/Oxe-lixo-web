@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, Image, Form, Button ,Segment} from 'semantic-ui-react';
+import MenuCental from "../../MenuCental";
 
 
 const TelaLogin = () => {
@@ -7,6 +8,7 @@ const TelaLogin = () => {
   return (
     
     <Container fluid>
+      <MenuCental />
       <Grid
         textAlign="center"
         style={{ height: '100vh' }}
