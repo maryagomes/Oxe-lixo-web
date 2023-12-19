@@ -125,7 +125,7 @@ Com isso, nós podemos evitar a contaminação do ambiente e colaborar com nossa
                     {/* Adicione as opções de "Editar Perfil" e "Configurações" aqui */}
                     <Button as={Link} to="/editar-perfil" fluid>Editar Perfil</Button>
                     <Button as={Link} to="/configuracoes" fluid>Configurações</Button>
-                    <Button as={Link} to="/sair" fluid>Sair</Button>
+                    <Button as={Link} to="/" fluid>Sair</Button>
                 </Modal.Content>
             </Modal>
         </div>

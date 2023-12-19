@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid, Image, Form, Button ,Segment} from 'semantic-ui-react';
 import MenuCental from "../../MenuCental";
+import { Link } from 'react-router-dom';
 
 
 const TelaLogin = () => {
@@ -33,7 +34,7 @@ const TelaLogin = () => {
                 type="password"
               />
 
-              <Button color="teal" fluid size="large">
+              <Button as={Link} to='/home-usuario'color="teal" fluid size="large">
                 Login
               </Button>
             </Segment>

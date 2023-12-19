@@ -1,6 +1,6 @@
 import React , { useEffect,useState } from 'react';
 import { Container, Grid, Header, Image, Form, Button, Icon } from 'semantic-ui-react';
-import { /*Link*/useLocation } from "react-router-dom";
+import { /*Link*/Link, useLocation } from "react-router-dom";
 import InputMask from 'react-input-mask';
 import axios from "axios";
 import {mensagemErro, notifyError, notifySuccess } from '../util/Util';
@@ -18,7 +18,7 @@ const TelaUsuario = () => {
 .then((response) => {
                          setIdUsuario(response.data.id)
                          setNome(response.data.nome)
-                         setSenha(response.data.senha)
+                         setPassword(response.data.password)
                          setFoneCelular(response.data.foneCelular)
                          setDataNascimento(formatarData(response.data.dataNascimento))
                          setEmail(response.data.email)
@@ -31,7 +31,7 @@ const TelaUsuario = () => {
 
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
-  const [senha, setSenha] = useState();
+  const [password, setPassword] = useState();
   const [foneCelular,setFoneCelular]=useState();
   const [dataNascimento, setDataNascimento] = useState();
 
@@ -51,7 +51,7 @@ const TelaUsuario = () => {
 		let usuarioRequest = {
 		     nome: nome,
 		     email: email,
-         senha:senha,
+         password:password,
 		     dataNascimento: dataNascimento     
 		     
 		}
@@ -117,8 +117,8 @@ const TelaUsuario = () => {
                     label="Senha"
                     placeholder="Digite Sua Senha"
                     type="password"
-                    value={senha}
-			onChange={e => setSenha(e.target.value)}
+                    value={password}
+			onChange={e => setPassword(e.target.value)}
 
                   />
                   <Form.Input
@@ -156,9 +156,10 @@ const TelaUsuario = () => {
                   </Form.Input>
                   
 
-                  <Button color="teal" fluid size="large"                   
+                  <Button  as={Link} to='/tela-login' color="teal" fluid size="large"                   
                    
                     onClick={() => cadastrar()}
+                    
                     >
 				<Icon name='cadastrar' />
 				cadastrar
