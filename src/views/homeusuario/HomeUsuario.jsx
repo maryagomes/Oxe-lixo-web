@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { Button, Container, Image, Menu, MenuItem, Modal } from 'semantic-ui-react';
-
-
 import { FaUser } from 'react-icons/fa';
 
 export default function HomeUsuario() {
@@ -120,8 +118,8 @@ Com isso, nós podemos evitar a contaminação do ambiente e colaborar com nossa
                 </div>
             </Container>
 
-            {/* Modal para perfil */}
-            <Modal open={modalOpen} onClose={closeModal} size='mini'>
+              {/* Modal para perfil */}
+              <Modal open={modalOpen} onClose={closeModal} size='mini'>
                 <Modal.Header>Perfil do Usuário</Modal.Header>
                 <Modal.Content>
                     {/* Adicione as opções de "Editar Perfil" e "Configurações" aqui */}

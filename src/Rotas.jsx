@@ -9,6 +9,7 @@ import PontosDeColeta from './views/coleta/PontosDeColeta'
 import SobreNos from './views/SOBRENOS/SobreNos';
 import HomeUsuario from './views/homeusuario/HomeUsuario';
 
+
 function Rotas() {
     return (
         <>
@@ -20,8 +21,7 @@ function Rotas() {
                 <Route path="pontos-de-coleta" element={ <PontosDeColeta/> } />
                 <Route path="sobre-nos" element={ <SobreNos/> } />
                 <Route path="home-usuario" element={ <HomeUsuario/> } />
-
-
+               
             </Routes>
         </>
     )

@@ -10,7 +10,7 @@ import MenuCental from "../../MenuCental";
 const TelaUsuario = () => {
  
   const { state } = useLocation();
-  const [idUsuario, setIdUsuario] = useState();
+  const [ idUsuario , setIdUsuario] = useState();
 
   useEffect(() => {
       if (state != null && state.id != null) {
